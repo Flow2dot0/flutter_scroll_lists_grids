@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_scrolling_lists_grids/sections/list_view_and_list_tile_page.dart';
 import 'sections/single_child_scroll_view_page.dart';
 import 'widgets/custom_text.dart';
 
@@ -48,6 +49,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 child: CustomText("1. Le SingleChildScrollView", color: Colors.white, bold: true, factor: 1.00,)
               ),
+            RaisedButton(
+                color: Colors.blueAccent,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ListViewAndListTilePage()));
+                },
+                child: CustomText("2. La ListView et la ListTile", color: Colors.white, bold: true, factor: 1.00,)
+            ),
            ]
         ),
       ),
