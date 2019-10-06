@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_scrolling_lists_grids/sections/list_view_and_list_tile_page.dart';
 import 'sections/single_child_scroll_view_page.dart';
 import 'sections/dismissible_page.dart';
@@ -6,7 +7,16 @@ import 'sections/custom_tile_page.dart';
 
 import 'widgets/custom_text.dart';
 
-void main() => runApp(MyApp());
+void main() {
+
+  //set pref orientations
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight
+  ]);
+
+  runApp(MyApp());
+} 
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
