@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_scrolling_lists_grids/sections/list_view_and_list_tile_page.dart';
 import 'sections/single_child_scroll_view_page.dart';
 import 'sections/dismissible_page.dart';
+import 'sections/custom_tile_page.dart';
 
 import 'widgets/custom_text.dart';
 
@@ -64,6 +65,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => DismissiblePage()));
                 },
                 child: CustomText("3. Le Dismissible", color: Colors.white, bold: true, factor: 1.00,)
+            ),
+            RaisedButton(
+                color: Colors.pink,
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CustomTilePage()));
+                },
+                child: CustomText("4. Création d'une CustomTile", color: Colors.white, bold: true, factor: 1.00,)
             ),
            ]
         ),
