@@ -29,6 +29,9 @@ class _CustomTilePageState extends State<CustomTilePage> {
 
   @override
   Widget build(BuildContext context) {
+    //get the orientation device
+    Orientation orientation = MediaQuery.of(context).orientation;
+    print(orientation);
     return Scaffold(
       appBar: AppBar(
         title: CustomText("CustomTile", color: Colors.white,),
