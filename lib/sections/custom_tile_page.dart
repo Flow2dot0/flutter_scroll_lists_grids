@@ -46,19 +46,25 @@ class _CustomTilePageState extends State<CustomTilePage> {
                   padding: EdgeInsets.all(5.0),
                   child: Card(
                     elevation: 7.5,
-                    child: Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Icon(currentActivity.icon, color: Colors.blue, size: 75.0,),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              CustomText("Activité : ", color: Colors.blue[100], factor: 1.5,),
-                              CustomText(currentActivity.name, color: Colors.blue[700], factor: 2,)
-                            ],
-                          )
-                        ],
+                    child: InkWell(
+                      onTap: (()=> print("tapped")),
+                      onLongPress: (()=> print("long pressed")),
+                      onDoubleTap: (()=> print("double tapped")),
+                      onHover: (bool b)=> print("hovered $b"),
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Icon(currentActivity.icon, color: Colors.blue, size: 75.0,),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                CustomText("Activité : ", color: Colors.blue[100], factor: 1.5,),
+                                CustomText(currentActivity.name, color: Colors.blue[700], factor: 2,)
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
